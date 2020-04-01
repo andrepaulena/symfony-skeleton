@@ -1,13 +1,20 @@
+{% apply spaceless %}
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+
+        {{ encore_entry_link_tags('vendor-style') }}
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
         <h1>OMG! It works</h1>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+
+
+        {{ encore_entry_script_tags('vendor-js') }}
     </body>
 </html>
+{% endapply %}
